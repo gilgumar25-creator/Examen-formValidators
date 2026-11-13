@@ -1,0 +1,74 @@
+<form [formGroup]="veterinariaForm" class="w-50">
+    <h2>Registro</h2>
+    <div class="mb-3 mt-3">
+        <label for="nombre" class="form-label">Nombre:</label>
+        <input type="text" class="form-control" id="nombre" placeholder="Nombre" name="nombre">
+        @if(veterinariaForm.getNombre().dirty && veterinariaForm.getNombre().touched){
+            Este campo es obligatorio
+        }
+    </div>
+    <div class="mb-3 mt-3">
+        <label for="nombre" class="form-label">Apellidos:</label>
+        <input type="text" class="form-control" id="apellidos" placeholder="Apellidos" name="nombre">
+    </div>
+    <div class="mb-3 mt-3">
+        <label for="nombre" class="form-label">Telefono:</label>
+        <input type="text" class="form-control" id="telefono" placeholder="+34 " name="telefono">
+    </div>
+    <div class="mb-3 mt-3">
+        <label for="nombre" class="form-label">Email:</label>
+        <input type="email" class="form-control" id="email" placeholder="Email" name="email">
+    </div>
+    <div class="mb-3 mt-3">
+        <label for="nombre" class="form-label">Nombre de la mascota:</label>
+        <input type="text" class="form-control" id="mascota" placeholder="Chubby" name="mascota">
+    </div>
+    <div class="mb-3 mt-3">
+        <label for="nombre" class="form-label">Especie:</label>
+        <input type="text" class="form-control" id="especies" placeholder="Escoja" name="especies">
+        <!-- @for(e of especies, track e.name()){
+             
+        No recuerdo el contenido del bucle
+
+        } -->
+    </div>
+    <div class="mb-3 mt-3">
+        <label for="nombre" class="form-label">Sexo:</label>
+        <input type="text" class="form-control" id="sexo" placeholder="Tu" name="sexo">
+    </div>
+    <div class="mb-3 mt-3">
+        <label for="nombre" class="form-label">Raza:</label>
+        <input type="text" class="form-control" id="raza" placeholder="Mario" name="raza">
+    </div>
+    <div class="mb-3 mt-3">
+        <label for="nombre" class="form-label">Edad:</label>
+        <input type="text" class="form-control" id="edad" placeholder="12" name="edad">
+    </div>
+    <div class="mb-3 mt-3">
+        <label for="nombre" class="form-label">Peso:</label>
+        <input type="text" class="form-control" id="peso" placeholder="58 Kg" name="peso">
+    </div>
+    <div class="mb-3 mt-3">
+        <label for="nombre" class="form-label">Número de microchip:</label>
+        <input type="text" class="form-control" id="microchip" placeholder="11" name="microchip">
+    </div>
+    <div class="mb-3 mt-3">
+        <label for="nombre" class="form-label">Contraseña:</label>
+        <input type="text" class="form-control" id="password" placeholder="*******" name="password">
+    </div>
+    <div class="mb-3 mt-3">
+        <label for="nombre" class="form-label">Motivo de la primera visita:</label>
+        <input type="text-area" class="form-control" id="motivo" placeholder="Me gusta el choco" name="motivo">
+    </div>
+    <div class="form-check mb-3">
+        <input class="form-check-input" type="checkbox" id="política" name="política">
+        <label class="form-check-label" for="myCheck">Acepto la política de privacidad.</label>
+    </div>
+    <div class="form-check mb-3">
+        <input class="form-check-input" type="checkbox" id="recordatorios" name="recordatorios">
+        <label class="form-check-label" for="myCheck">Quiero recibir recordatorios de vacunas</label>
+
+
+    </div>
+    <button type="submit" class="btn btn-primary " >Guardar</button>
+</form>
